@@ -39,6 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const header = document.createElement('h2');
         header.innerHTML = `${verb.emoji || '📘'} ${verb.infinitive} — <span style="font-weight: normal; font-size: 1rem;">${verb.translation}</span>`;
 
+        const playInfinitive = document.createElement('button');
+        playInfinitive.textContent = `▶️ ${verb.infinitive}`;
+        playInfinitive.className = 'theme-toggle';
+        playInfinitive.addEventListener('click', () => {
+          const audio = new Audio(`${baseURL}/${verb.infinitive}/${verb.infinitive}.mp3`);
+          audio.play();
+        });
+
         const comment = document.createElement('p');
         comment.textContent = verb.comment;
         comment.style.fontStyle = 'italic';
@@ -83,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         detail.appendChild(back);
         detail.appendChild(header);
+        detail.appendChild(playInfinitive);
         detail.appendChild(comment);
         detail.appendChild(table);
       }

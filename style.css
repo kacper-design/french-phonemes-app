@@ -1,0 +1,156 @@
+/* GLOBAL */
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.light {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* THEME TOGGLE */
+  .theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #292929;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+    transition: background 0.3s;
+  }
+  
+  body.light .theme-toggle {
+    background: #ddd;
+    color: #000;
+  }
+  
+  /* LAYOUT */
+  #container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .phoneme-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+    position: relative;
+  }
+  
+  /* HEADERS */
+  .phoneme-column h2 {
+    grid-column: 1 / -1;
+    font-size: 1.25rem;
+    background: inherit;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: #90caf9;
+    border-bottom: 1px solid #333;
+    backdrop-filter: blur(8px);
+  }
+  
+  body.light .phoneme-column h2 {
+    color: #0077cc;
+    border-color: #ccc;
+  }
+  
+  /* PHONEME GROUPS */
+  .phoneme-group {
+    background: #1e1e1e;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #2c2c2c;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+  }
+  
+  body.light .phoneme-group {
+    background: #ffffff;
+    border-color: #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .phoneme {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #7dd3fc;
+    text-align: center;
+  }
+  
+  body.light .phoneme {
+    color: #0077cc;
+  }
+  
+  /* WORD CARDS */
+  .word-card {
+    background-color: #292929;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  .word-card:hover {
+    background-color: #3a3a3a;
+  }
+  
+  body.light .word-card {
+    background-color: #f0f0f0;
+  }
+  
+  body.light .word-card:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .word {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .word strong {
+    color: #fa15f2;
+    font-weight: 700;
+  }
+  
+  .translation {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  
+  body.light .translation {
+    color: #555;
+  }
+  
+  .emoji {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
+  

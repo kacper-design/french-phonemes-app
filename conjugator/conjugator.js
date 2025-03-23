@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
           card.className = "word-card";
           card.style.cursor = 'pointer';
           card.innerHTML = `
-            <div class="emoji">📘</div>
+            <div class="emoji">${verb.emoji || '📘'}</div>
             <div class="word">${verb.infinitive}</div>
             <div class="translation">${verb.translation}</div>
           `;
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         back.addEventListener('click', renderGrid);
 
         const header = document.createElement('h2');
-        header.innerHTML = `${verb.infinitive} — <span style="font-weight: normal; font-size: 1rem;">${verb.translation}</span>`;
+        header.innerHTML = `${verb.emoji || '📘'} ${verb.infinitive} — <span style="font-weight: normal; font-size: 1rem;">${verb.translation}</span>`;
 
         const comment = document.createElement('p');
         comment.textContent = verb.comment;

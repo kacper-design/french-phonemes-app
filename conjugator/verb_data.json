@@ -2,6 +2,7 @@
     {
       "infinitive": "parler",
       "translation": "to speak",
+      "emoji": "🗣️",
       "group": 1,
       "regular": true,
       "tense": "present",
@@ -18,6 +19,7 @@
     {
       "infinitive": "finir",
       "translation": "to finish",
+      "emoji": "🏁",
       "group": 2,
       "regular": true,
       "tense": "present",
@@ -34,6 +36,7 @@
     {
       "infinitive": "être",
       "translation": "to be",
+      "emoji": "🧍",
       "group": 3,
       "regular": false,
       "tense": "present",
@@ -48,4 +51,3 @@
       ]
     }
   ]
-  

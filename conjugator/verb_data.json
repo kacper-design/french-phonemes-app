@@ -14,7 +14,59 @@
         { "subject": "nous", "form": "parlons", "highlight": "ons" },
         { "subject": "vous", "form": "parlez", "highlight": "ez" },
         { "subject": "ils/elles", "form": "parlent", "highlight": "ent" }
+        ,
+    {
+      "infinitive": "vendre",
+      "translation": "to sell",
+      "emoji": "💰",
+      "group": 3,
+      "regular": true,
+      "tense": "present",
+      "comment": "Vendre is a regular -re verb. Drop -re and add: -s, -s, -, -ons, -ez, -ent.",
+      "forms": [
+        { "subject": "je", "form": "vends", "highlight": "s" },
+        { "subject": "tu", "form": "vends", "highlight": "s" },
+        { "subject": "il/elle/on", "form": "vend", "highlight": "" },
+        { "subject": "nous", "form": "vendons", "highlight": "ons" },
+        { "subject": "vous", "form": "vendez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "vendent", "highlight": "ent" }
       ]
+    },
+    {
+      "infinitive": "mettre",
+      "translation": "to put",
+      "emoji": "📦",
+      "group": 3,
+      "regular": false,
+      "tense": "present",
+      "comment": "Mettre is irregular. Conjugation is based on a shortened stem 'mett-' for plural forms.",
+      "forms": [
+        { "subject": "je", "form": "mets", "highlight": "s" },
+        { "subject": "tu", "form": "mets", "highlight": "s" },
+        { "subject": "il/elle/on", "form": "met", "highlight": "t" },
+        { "subject": "nous", "form": "mettons", "highlight": "tons" },
+        { "subject": "vous", "form": "mettez", "highlight": "tez" },
+        { "subject": "ils/elles", "form": "mettent", "highlight": "tent" }
+      ]
+    },
+    {
+      "infinitive": "venir",
+      "translation": "to come",
+      "emoji": "🚶",
+      "group": 3,
+      "regular": false,
+      "tense": "present",
+      "comment": "Venir is irregular. Its stem changes in singular and plural forms.",
+      "forms": [
+        { "subject": "je", "form": "viens", "highlight": "iens" },
+        { "subject": "tu", "form": "viens", "highlight": "iens" },
+        { "subject": "il/elle/on", "form": "vient", "highlight": "ient" },
+        { "subject": "nous", "form": "venons", "highlight": "nons" },
+        { "subject": "vous", "form": "venez", "highlight": "nez" },
+        { "subject": "ils/elles", "form": "viennent", "highlight": "iennent" }
+      ]
+    }
+  ]
     },
     {
       "infinitive": "finir",
@@ -50,4 +102,211 @@
         { "subject": "ils/elles", "form": "sont", "highlight": "sont" }
       ]
     }
+      ,
+    {
+      "infinitive": "chanter",
+      "translation": "to sing",
+      "emoji": "🎤",
+      "group": 1,
+      "regular": true,
+      "tense": "present",
+      "comment": "Chanter is a regular -er verb. Drop -er and add endings: -e, -es, -e, -ons, -ez, -ent.",
+      "forms": [
+        { "subject": "je", "form": "chante", "highlight": "e" },
+        { "subject": "tu", "form": "chantes", "highlight": "es" },
+        { "subject": "il/elle/on", "form": "chante", "highlight": "e" },
+        { "subject": "nous", "form": "chantons", "highlight": "ons" },
+        { "subject": "vous", "form": "chantez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "chantent", "highlight": "ent" }
+      ]
+    },
+    {
+      "infinitive": "aimer",
+      "translation": "to love",
+      "emoji": "❤️",
+      "group": 1,
+      "regular": true,
+      "tense": "present",
+      "comment": "Aimer is a regular -er verb. Drop -er and add endings: -e, -es, -e, -ons, -ez, -ent.",
+      "forms": [
+        { "subject": "je", "form": "aime", "highlight": "e" },
+        { "subject": "tu", "form": "aimes", "highlight": "es" },
+        { "subject": "il/elle/on", "form": "aime", "highlight": "e" },
+        { "subject": "nous", "form": "aimons", "highlight": "ons" },
+        { "subject": "vous", "form": "aimez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "aiment", "highlight": "ent" }
+      ]
+    },
+    {
+      "infinitive": "choisir",
+      "translation": "to choose",
+      "emoji": "🧠",
+      "group": 2,
+      "regular": true,
+      "tense": "present",
+      "comment": "Choisir is a regular -ir verb. Drop -ir and add: -is, -is, -it, -issons, -issez, -issent.",
+      "forms": [
+        { "subject": "je", "form": "choisis", "highlight": "is" },
+        { "subject": "tu", "form": "choisis", "highlight": "is" },
+        { "subject": "il/elle/on", "form": "choisit", "highlight": "it" },
+        { "subject": "nous", "form": "choisissons", "highlight": "issons" },
+        { "subject": "vous", "form": "choisissez", "highlight": "issez" },
+        { "subject": "ils/elles", "form": "choisissent", "highlight": "issent" }
+      ]
+    }
+  ,
+    {
+      "infinitive": "prendre",
+      "translation": "to take",
+      "emoji": "📥",
+      "group": 3,
+      "regular": false,
+      "tense": "present",
+      "comment": "Prendre is irregular. Plural forms double the 'n'.",
+      "forms": [
+        { "subject": "je", "form": "prends", "highlight": "nds" },
+        { "subject": "tu", "form": "prends", "highlight": "nds" },
+        { "subject": "il/elle/on", "form": "prend", "highlight": "nd" },
+        { "subject": "nous", "form": "prenons", "highlight": "nons" },
+        { "subject": "vous", "form": "prenez", "highlight": "nez" },
+        { "subject": "ils/elles", "form": "prennent", "highlight": "nnent" }
+      ]
+    },
+    {
+      "infinitive": "aller",
+      "translation": "to go",
+      "emoji": "🏃",
+      "group": 3,
+      "regular": false,
+      "tense": "present",
+      "comment": "Aller is highly irregular and used for the near future tense as well.",
+      "forms": [
+        { "subject": "je", "form": "vais", "highlight": "vais" },
+        { "subject": "tu", "form": "vas", "highlight": "vas" },
+        { "subject": "il/elle/on", "form": "va", "highlight": "va" },
+        { "subject": "nous", "form": "allons", "highlight": "allons" },
+        { "subject": "vous", "form": "allez", "highlight": "allez" },
+        { "subject": "ils/elles", "form": "vont", "highlight": "vont" }
+      ]
+    },
+    {
+      "infinitive": "monter",
+      "translation": "to go up",
+      "emoji": "⛰️",
+      "group": 1,
+      "regular": true,
+      "tense": "present",
+      "comment": "Monter is a regular -er verb. Drop -er and add: -e, -es, -e, -ons, -ez, -ent.",
+      "forms": [
+        { "subject": "je", "form": "monte", "highlight": "e" },
+        { "subject": "tu", "form": "montes", "highlight": "es" },
+        { "subject": "il/elle/on", "form": "monte", "highlight": "e" },
+        { "subject": "nous", "form": "montons", "highlight": "ons" },
+        { "subject": "vous", "form": "montez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "montent", "highlight": "ent" }
+      ]
+    },
+    {
+      "infinitive": "descendre",
+      "translation": "to go down",
+      "emoji": "⬇️",
+      "group": 3,
+      "regular": true,
+      "tense": "present",
+      "comment": "Descendre is a regular -re verb. Drop -re and add: -s, -s, -, -ons, -ez, -ent.",
+      "forms": [
+        { "subject": "je", "form": "descends", "highlight": "s" },
+        { "subject": "tu", "form": "descends", "highlight": "s" },
+        { "subject": "il/elle/on", "form": "descend", "highlight": "" },
+        { "subject": "nous", "form": "descendons", "highlight": "ons" },
+        { "subject": "vous", "form": "descendez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "descendent", "highlight": "ent" }
+      ]
+    },
+    {
+      "infinitive": "habiter",
+      "translation": "to live (somewhere)",
+      "emoji": "🏠",
+      "group": 1,
+      "regular": true,
+      "tense": "present",
+      "comment": "Habiter is a regular -er verb. Drop -er and add: -e, -es, -e, -ons, -ez, -ent.",
+      "forms": [
+        { "subject": "je", "form": "habite", "highlight": "e" },
+        { "subject": "tu", "form": "habites", "highlight": "es" },
+        { "subject": "il/elle/on", "form": "habite", "highlight": "e" },
+        { "subject": "nous", "form": "habitons", "highlight": "ons" },
+        { "subject": "vous", "form": "habitez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "habitent", "highlight": "ent" }
+      ]
+    },
+    {
+      "infinitive": "avoir",
+      "translation": "to have",
+      "emoji": "👐",
+      "group": 3,
+      "regular": false,
+      "tense": "present",
+      "comment": "Avoir is irregular. Memorize its forms individually.",
+      "forms": [
+        { "subject": "je", "form": "ai", "highlight": "ai" },
+        { "subject": "tu", "form": "as", "highlight": "as" },
+        { "subject": "il/elle/on", "form": "a", "highlight": "a" },
+        { "subject": "nous", "form": "avons", "highlight": "ons" },
+        { "subject": "vous", "form": "avez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "ont", "highlight": "ont" }
+      ]
+    },
+    {
+      "infinitive": "s'appeler",
+      "translation": "to be called",
+      "emoji": "🧾",
+      "group": 1,
+      "regular": false,
+      "tense": "present",
+      "comment": "S'appeler is a pronominal verb and doubles the 'l' in singular and 3rd person plural.",
+      "forms": [
+        { "subject": "je", "form": "m'appelle", "highlight": "pelle" },
+        { "subject": "tu", "form": "t'appelles", "highlight": "pelles" },
+        { "subject": "il/elle/on", "form": "s'appelle", "highlight": "pelle" },
+        { "subject": "nous", "form": "nous appelons", "highlight": "lons" },
+        { "subject": "vous", "form": "vous appelez", "highlight": "lez" },
+        { "subject": "ils/elles", "form": "s'appellent", "highlight": "pellent" }
+      ]
+    },
+    {
+      "infinitive": "faire",
+      "translation": "to do / to make",
+      "emoji": "🛠️",
+      "group": 3,
+      "regular": false,
+      "tense": "present",
+      "comment": "Faire is irregular. It has multiple stem changes.",
+      "forms": [
+        { "subject": "je", "form": "fais", "highlight": "fais" },
+        { "subject": "tu", "form": "fais", "highlight": "fais" },
+        { "subject": "il/elle/on", "form": "fait", "highlight": "fait" },
+        { "subject": "nous", "form": "faisons", "highlight": "sons" },
+        { "subject": "vous", "form": "faites", "highlight": "tes" },
+        { "subject": "ils/elles", "form": "font", "highlight": "font" }
+      ]
+    },
+    {
+      "infinitive": "manger",
+      "translation": "to eat",
+      "emoji": "🍽️",
+      "group": 1,
+      "regular": true,
+      "tense": "present",
+      "comment": "Manger is regular, but adds an 'e' in the 'nous' form to keep soft g sound.",
+      "forms": [
+        { "subject": "je", "form": "mange", "highlight": "e" },
+        { "subject": "tu", "form": "manges", "highlight": "es" },
+        { "subject": "il/elle/on", "form": "mange", "highlight": "e" },
+        { "subject": "nous", "form": "mangeons", "highlight": "eons" },
+        { "subject": "vous", "form": "mangez", "highlight": "ez" },
+        { "subject": "ils/elles", "form": "mangent", "highlight": "ent" }
+      ]
+    }
   ]
+  

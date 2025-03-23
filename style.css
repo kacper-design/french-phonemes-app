@@ -1,60 +1,68 @@
 body {
-    margin: 0;
     background-color: #121212;
-    color: #f5f5f5;
+    color: #fff;
     font-family: 'Inter', sans-serif;
+    margin: 0;
     padding: 2rem;
   }
+  
   h1 {
-    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
-  .phoneme-group {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #333;
-    border-radius: 12px;
-    background-color: #1e1e1e;
-  }
-  .phoneme {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #90caf9;
-  }
-  .word-list {
-    display: flex;
-    flex-wrap: wrap;
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
   }
-  .word-card {
-    background-color: #2a2a2a;
+  
+  .phoneme-group {
+    background: #1e1e1e;
+    border-radius: 1rem;
     padding: 1rem;
-    border-radius: 10px;
-    width: 180px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .phoneme {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #7dd3fc;
+  }
+  
+  .word-card {
+    background: #292929;
+    border-radius: 0.75rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
   }
+  
+  .word-card:hover {
+    background: #333;
+  }
+  
   .emoji {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
+  
   .word {
-    font-weight: bold;
     font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
   }
+  
+  .word strong {
+    color: #facc15;
+    font-weight: 700;
+  }
+  
   .translation {
     font-size: 0.9rem;
-    color: #ccc;
-    margin-bottom: 0.5rem;
+    color: #aaa;
   }
-  audio {
-    width: 100%;
-  }
-
-  .word strong {
-    color: #ffc107;
-    font-weight: 600;
-  }
-  
-  

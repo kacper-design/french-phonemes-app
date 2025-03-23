@@ -65,7 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const highlighted = entry.form.replace(regex, '<strong>$1</strong>');
 
           const fullPhrase = `${entry.subject.split('/')[0]} ${entry.form}`;
-          const audioPath = `${baseURL}/${verb.infinitive}/${encodeURIComponent(fullPhrase)}.mp3`;
+          const safePhrase = fullPhrase.replace(/\//g, '_').replace(/ /g, '_');
+          const audioPath = `${baseURL}/${verb.infinitive}/${encodeURIComponent(safePhrase)}.mp3`;
 
           td2.innerHTML = `<span class="clickable-form">${highlighted} 🔊</span>`;
           td2.addEventListener('click', () => {

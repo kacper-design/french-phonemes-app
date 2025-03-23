@@ -1,12 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('content');
     const baseURL = 'https://kacper-design.github.io/french-phonemes-app/audio';
-    const allPhonemes = [...vowelPhonemes, ...consonantPhonemes];
   
-    const grid = document.createElement('div');
-    grid.className = 'grid';
+    // Create layout containers
+    const layout = document.createElement('div');
+    layout.id = 'container';
   
-    allPhonemes.forEach(group => {
+    const vowelCol = document.createElement('div');
+    vowelCol.id = 'vowel-column';
+    vowelCol.className = 'phoneme-column';
+  
+    const consonantCol = document.createElement('div');
+    consonantCol.id = 'consonant-column';
+    consonantCol.className = 'phoneme-column';
+  
+    // Optional column headers
+    const vowelHeader = document.createElement('h2');
+    vowelHeader.textContent = 'Vowels';
+    vowelCol.appendChild(vowelHeader);
+  
+    const consonantHeader = document.createElement('h2');
+    consonantHeader.textContent = 'Consonants';
+    consonantCol.appendChild(consonantHeader);
+  
+    // Helper to create a phoneme group section
+    function createPhonemeGroup(group) {
       const section = document.createElement('div');
       section.className = 'phoneme-group';
   
@@ -20,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         card.className = 'word-card';
   
         const regex = new RegExp(`(${w.highlight})`, 'i');
-        const highlighted = w.word.replace(regex, '<strong>$1</strong>');
+        const highlightedWord = w.word.replace(regex, '<strong>$1</strong>');
   
         card.innerHTML = `
           <div class="emoji">${w.emoji}</div>
-          <div class="word">${highlighted}</div>
+          <div class="word">${highlightedWord}</div>
           <div class="translation">${w.translation}</div>
         `;
   
@@ -37,9 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
         section.appendChild(card);
       });
   
-      grid.appendChild(section);
+      return section;
+    }
+  
+    // Populate both columns
+    vowelPhonemes.forEach(group => {
+      const section = createPhonemeGroup(group);
+      vowelCol.appendChild(section);
     });
   
-    container.appendChild(grid);
+    consonantPhonemes.forEach(group => {
+      const section = createPhonemeGroup(group);
+      consonantCol.appendChild(section);
+    });
+  
+    layout.appendChild(vowelCol);
+    layout.appendChild(consonantCol);
+    container.appendChild(layout);
   });
   

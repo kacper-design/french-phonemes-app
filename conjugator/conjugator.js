@@ -60,9 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const td2 = document.createElement('td');
         const regex = new RegExp(`(${entry.highlight})$`, 'i');
         const highlighted = entry.form.replace(regex, '<strong>$1</strong>');
+  
+        const fullPhrase = `${entry.subject.split('/')[0]} ${entry.form}`; // use first subject form
+        const audioPath = `${baseURL}/${verb.infinitive}/${encodeURIComponent(fullPhrase)}.mp3`;
+  
         td2.innerHTML = `<span class="clickable-form">${highlighted} 🔊</span>`;
         td2.addEventListener('click', () => {
-          const audio = new Audio(`${baseURL}/${encodeURIComponent(entry.form)}.mp3`);
+          const audio = new Audio(audioPath);
           audio.play();
         });
   

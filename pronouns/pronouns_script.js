@@ -15,30 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const tr = document.createElement('tr');
     Object.values(row).forEach(val => {
       const td = document.createElement('td');
+
+      // split multiple values
       const parts = val.split('/');
       parts.forEach((part, index) => {
         const span = document.createElement('span');
         span.textContent = part.trim();
         span.style.cursor = 'pointer';
         span.style.marginRight = '0.3rem';
-        span.style.display = 'inline-flex';
-        span.style.alignItems = 'center';
-        span.style.gap = '0.2rem';
-
-        const icon = document.createElement('span');
-        icon.textContent = '🔈';
-        icon.className = 'speaker';
-
-        span.appendChild(icon);
-
         span.addEventListener('click', (e) => {
-          e.stopPropagation();
+          e.stopPropagation(); // prevent td clicks if ever added
           const audio = new Audio(`${baseURL}/${encodeURIComponent(part.trim())}.mp3`);
           audio.play();
         });
-
         td.appendChild(span);
 
+        // Add separator for readability
         if (index < parts.length - 1) {
           const slash = document.createElement('span');
           slash.textContent = '/';
@@ -46,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
           td.appendChild(slash);
         }
       });
+
       tr.appendChild(td);
     });
     table.appendChild(tr);

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Theme toggle button
   const themeToggle = document.createElement("button");
-  themeToggle.textContent = "🌓 Toggle Theme";
+  themeToggle.textContent = "🌓";
   themeToggle.className = "theme-toggle";
   themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("light");

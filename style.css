@@ -51,4 +51,10 @@ body {
   audio {
     width: 100%;
   }
+
+  .word strong {
+    color: #ffc107;
+    font-weight: 600;
+  }
+  
   

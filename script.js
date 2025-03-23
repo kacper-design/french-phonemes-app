@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('content');
+    const baseURL = 'https://kacper-design.github.io/french-phonemes-app';
   
     phonemeData.forEach(group => {
       const section = document.createElement('div');
@@ -20,14 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const regex = new RegExp(`(${w.highlight})`, 'i');
         const highlightedWord = w.word.replace(regex, '<strong>$1</strong>');
   
+        const audio = new Audio(`${baseURL}/audio/${encodeURIComponent(w.word)}.mp3`);
+        card.addEventListener('click', () => {
+          audio.currentTime = 0;
+          audio.play();
+        });
+  
         card.innerHTML = `
           <div class="emoji">${w.emoji}</div>
           <div class="word">${highlightedWord}</div>
           <div class="translation">${w.translation}</div>
-          <audio controls>
-            <source src="audio/${w.word}.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
         `;
   
         list.appendChild(card);
@@ -37,4 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
       container.appendChild(section);
     });
   });
-  

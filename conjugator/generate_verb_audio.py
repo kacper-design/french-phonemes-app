@@ -20,15 +20,21 @@ for verb in verb_data:
     folder = os.path.join(AUDIO_ROOT, infinitive)
     os.makedirs(folder, exist_ok=True)
 
+    # Generate infinitive pronunciation
+    infinitive_file = os.path.join(folder, f'{infinitive}.mp3')
+    if not os.path.exists(infinitive_file):
+        tts = gTTS(infinitive, lang='fr')
+        tts.save(infinitive_file)
+        print(f"✅ Saved {infinitive_file}")
+    else:
+        print(f"⏭️ Skipped (exists): {infinitive_file}")
+
     for form in verb['forms']:
-        subject = form['subject'].split('/')[0]  # use first subject (e.g., 'il' from 'il/elle/on')
+        subject = form['subject'].split('/')[0]  # use first subject only
         word = form['form']
 
-        # File paths
+        # Conjugated form file (just the verb)
         word_file = os.path.join(folder, f'{safe(word)}.mp3')
-        phrase_file = os.path.join(folder, f'{safe(subject)}_{safe(word)}.mp3')
-
-        # Generate conjugated form only
         if not os.path.exists(word_file):
             tts1 = gTTS(word, lang='fr')
             tts1.save(word_file)
@@ -36,8 +42,9 @@ for verb in verb_data:
         else:
             print(f"⏭️ Skipped (exists): {word_file}")
 
-        # Generate full phrase
+        # Subject + form
         phrase = f'{subject} {word}'
+        phrase_file = os.path.join(folder, f'{safe(phrase)}.mp3')
         if not os.path.exists(phrase_file):
             tts2 = gTTS(phrase, lang='fr')
             tts2.save(phrase_file)

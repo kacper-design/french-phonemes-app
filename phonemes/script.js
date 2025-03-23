@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("content");
-  const baseURL = "https://kacper-design.github.io/french-phonemes-app/audio";
+  const baseURL = './audio';
 
   // Theme toggle button
   const themeToggle = document.createElement("button");
